@@ -1,0 +1,59 @@
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 100px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+.logo-style{
+  width: 300px;
+  height: 200px;
+  margin-right: 50px;
+}
+.popup-img{
+width: 200px;
+height: 200px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*---INDEX STYLING---*/
+.caro-style{
+  margin-left:110px;
+ } 
+/*---CHECKOUT STYLING---*/
+img.resize {
+  width:15%;
+  height:20%;
+  margin: 10px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.checkout-style{
+  margin: 100px;
+}
+
+
+/*--PRODUCT STYLING--*/
+.product-style{
+  margin: 50px;
+}
+
+.product{
+  width: 600px;
+  height: 600px;
+  }
+
+.simproduct{
+  width: 100px;
+  height: 100px;
+  }
+  
+  .checkout-button{
+    color: #FFF;
+    text-decoration: none;
+  }
