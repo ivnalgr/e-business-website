@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    </linkrel>
+
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="scripts/simplecartjs/simpleCart.js"></script>
+    <script src="scripts/simplecartjs-config.js"></script>
+
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+        .login-page {
+            width: 860px;
+            padding: 8% 0 0;
+            margin: auto;
+        }
+
+        .form {
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 860px;
+            margin: 0 auto 100px;
+            padding: 45px;
+
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .form input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .form button {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #6ebac4;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+
+        .form button:hover,
+        .form button:active,
+        .form button:focus {
+            background: #4c929b;
+        }
+
+        .form .register-form {
+            display: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .credit-group {
+            margin: 0 0 15px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        body {
+            background: #cfcfcf;
+            /* fallback for old browsers */
+
+            font-family: "Roboto", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+
+    <div class="login-page">
+        <div class="form">
+            <title>Checkout</title>
+</head>
+
+<body>
+    <h1>Checkout</h1>
+
+    <div>
+        <p>
+            <a href="index.html" class="button">Home</a>
+            <a href="cart.html" class="button">View Cart(<span class="simpleCart_quantity"></span>items)</a>
+        </p>
+    </div>
+
+    <form action="../temp_name/thanks.html" method="post">
+        <h4>Full Name and Contact Details</h4>
+
+        <div class="form-group">
+            <label for="fname">First Name<span style="color: red;"> *</span></label><br />
+            <input type="text" name="firstname" id="fname" required/><br />
+        </div>
+
+        <p>
+            <label for="lname">Last Name<span style="color: red;"> *</span></label><br />
+            <input type="text" name="lastname" id="lname" required/><br />
+        </p>
+
+        <p>
+            <label for="phone_number">Phone Number<span style="color: red;"> *</span></label><br />
+            <input type="number" name="phone" id="phone_number" required/><br />
+        </p>
+
+        <p>
+            <label for="email_address">Email Address<span style="color: red;"> *</span></label><br />
+            <input type="email" name="email" id="email_address" required/><br />
+        </p>
+
+        <h4>Delivery Address</h4>
+        <p>
+            <label for="address_street_1">Street Address<span style="color: red;"> *</span></label><br />
+            <input type="text" name="street1" id="address_street_1" required/><br />
+        </p>
+
+        <p>
+            <label for="address_street_2">Street Address Line2</label><br />
+            <input type="text" name="street2" id="address_street_2"/><br />
+        </p>
+
+        <p>
+            <label for="address_city">City<span style="color: red;"> *</span></label><br />
+            <input type="text" name="city" id="address_city" required/><br />
+        </p>
+
+        <p>
+            <label for="address_state_province">State/Province<span style="color: red;"> *</span></label><br />
+            <input type="text" name="state_province" id="address_state_province" required/><br />
+        </p>
+
+        <p>
+            <label for="postal_code">Postal/Zip Code<span style="color: red;"> *</span></label><br />
+            <input type="number" name="postcode" id="postal_code" required/><br />
+        </p>
+
+        <p>
+            <label for="country">Country<span style="color: red;"> *</span></label><br />
+            <input type="text" name="country" id="country" required/><br />
+        </p>
+
+        <h4>Credit Card Details</h4>
+        <div>
+            <table >
+                <tbody>
+                    <tr>
+                        <td class="credit-group">
+                            <input type="radio" id="cc_mastercard" name="cc_type" value="mastercard" />
+                            <label for="cc_mastercard">Mastercard</label><br />
+                            <img src="images/mastercard.png" width="100" alt="card">
+                        </td>
+                        <td class="credit-group">
+                            <input type="radio" id="cc_visa" name="cc_type" value="visa" />
+                            <label for="cc_visa">Visa</label><br />
+                            <img src="images/visa.png" width="120" alt="card">
+                        </td>
+                        <td class="credit-group">
+                            <input type="radio" id="cc_amex" name="cc_type" value="amex" />
+                            <label for="cc_amex">American Express</label><br />
+                            <img src="images/amex.png" width="100" alt="card">
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <P>
+            <label for="credit_card_name">Name on Card<span style="color: red;"> *</span></label><br />
+            <input type="text" name="ccname" id="credit_card_name" required/><br />
+        </P>
+
+        <p>
+            <label for="credit_card_number">Card Number<span style="color: red;"> *</span></label><br />
+            <input type="text" name="ccnumber" id="credit_card_number" required/><br />
+        </p>
+
+        <p>
+            <label for="credit_card_number">Security Code<span style="color: red;"> *</span></label><br />
+            <input type="text" name="ccsecuritycode" id="credit_card_security_code" required/><br />
+        </p>
+        <div style="text-align: right">
+            <input type='submit' value='Confirm and Pay'/>
+        </div>
+    </form>
+</body>
+</div>
+</div>
+
+</html>
